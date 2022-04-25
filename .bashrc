@@ -10,7 +10,7 @@ source /etc/skel/.bashrc
 # Add user's private bin to PATH
 export PATH="$HOME/.local/bin:$PATH"
 
-# vi 
+# vi
 export EDITOR=vim
 set -o vi
 
@@ -38,6 +38,7 @@ fi
 # alias and func. for ROS
 alias cs="catkin source"
 alias cb="catkin build"
+alias ct="catkin build --this"
 rp() {
 	path=$1
 	cd ~/${path}/src
