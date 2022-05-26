@@ -10,6 +10,10 @@ source /etc/skel/.bashrc
 # Add user's private bin to PATH
 export PATH="$HOME/.local/bin:$PATH"
 
+# Share history between terminals
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+shopt -u histappend
+
 # vi
 export EDITOR=vim
 set -o vi
